@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    @apply bg-cinema-950 text-cinema-100 font-sans antialiased;
+    background-image: radial-gradient(ellipse 1200px 600px at 50% -10%, rgba(232, 179, 76, 0.09), transparent 60%);
+    background-attachment: fixed;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-display text-cinema-50 tracking-tight;
+  }
+
+  ::selection {
+    @apply bg-gold-400/30 text-gold-100;
+  }
+
+  /* Slim, dark scrollbars to match the theme */
+  ::-webkit-scrollbar {
+    height: 10px;
+    width: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  ::-webkit-scrollbar-thumb {
+    background-color: #3a3340;
+    border-radius: 999px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background-color: #524a58;
+  }
+}
+
+@layer components {
+  .container-page {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .card {
+    @apply rounded-xl border border-cinema-700/60 bg-cinema-850 shadow-card;
+  }
+
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-lg px-4 py-2.5 text-sm font-semibold
+      transition-colors duration-150 focus:outline-none focus-visible:ring-2 focus-visible:ring-gold-400/60
+      disabled:cursor-not-allowed disabled:opacity-50;
+  }
+
+  .btn-primary {
+    @apply btn bg-gold-400 text-cinema-950 hover:bg-gold-300 shadow-glow;
+  }
+
+  .btn-secondary {
+    @apply btn bg-cinema-700 text-cinema-100 hover:bg-cinema-600 border border-cinema-600;
+  }
+
+  .btn-danger {
+    @apply btn bg-marquee-red text-white hover:bg-marquee-redDark;
+  }
+
+  .btn-ghost {
+    @apply btn bg-transparent text-cinema-200 hover:bg-cinema-800 border border-transparent hover:border-cinema-700;
+  }
+
+  .input {
+    @apply w-full rounded-lg border border-cinema-600 bg-cinema-900 px-3.5 py-2.5 text-sm text-cinema-100
+      placeholder:text-cinema-400 focus:border-gold-400 focus:outline-none focus:ring-1 focus:ring-gold-400/60
+      transition-colors;
+  }
+
+  .label {
+    @apply mb-1.5 block text-sm font-medium text-cinema-300;
+  }
+
+  .badge {
+    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-1 text-xs font-semibold;
+  }
+
+  .badge-gold {
+    @apply badge bg-gold-400/15 text-gold-300 ring-1 ring-inset ring-gold-400/30;
+  }
+
+  .badge-green {
+    @apply badge bg-emerald-500/15 text-emerald-400 ring-1 ring-inset ring-emerald-500/30;
+  }
+
+  .badge-red {
+    @apply badge bg-marquee-red/15 text-red-400 ring-1 ring-inset ring-marquee-red/30;
+  }
+
+  .badge-gray {
+    @apply badge bg-cinema-600/40 text-cinema-300 ring-1 ring-inset ring-cinema-500/30;
+  }
+}
