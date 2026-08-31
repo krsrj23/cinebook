@@ -66,7 +66,7 @@ public class SecurityConfig {
         "http://localhost:5173",
         "http://localhost:4173",
         "http://localhost:4174",
-        "https://cheerful-stillness-production-f2b0.up.railway.app"
+        "https://cheerful-stillness-production-43c1.up.railway.app"
         ));        
         configuration.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "PATCH", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("Authorization", "Content-Type"));
